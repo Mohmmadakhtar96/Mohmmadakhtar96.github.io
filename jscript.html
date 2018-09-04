@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<h1>Adding Values</h1>
+</head>
+<body>
+
+ First Number:<br>
+  <input type="number" name="fn" id="firstnumber" /><br>
+  Second Number:<br>
+  <input type="number" name="sn" id="secondnumber" /><br>
+  Result: <br>
+  <input type="number" id="result" /><br>
+  <p id= "result"></p>
+  
+</form>
+<button type = "button" onclick="add()">Add Values</button>
+<script>
+function add() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+document.getElementById("result").value = firstnumber+secondnumber;
+
+}
+</script>
+</body>
+</html>
