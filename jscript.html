@@ -7,9 +7,9 @@
 <body>
 
  First Number:<br>
-  <input type="number" name="fn" id="firstnumber" /><br>
+  <input type="number" name="firstnumber" id="firstnumber" /><br>
   Second Number:<br>
-  <input type="number" name="sn" id="secondnumber" /><br>
+  <input type="number" name="secondnumber" id="secondnumber" /><br>
   Result: <br>
   <input type="number" id="result" /><br>
   <p id= "result"></p>
@@ -17,20 +17,100 @@
 </form>
 <button type = "button" onclick="add()">Add Values</button>
 <button type = "button" onclick="sub()">Subtract Values</button>
+<button type = "button" onclick="multi()">Multiply Values</button>
+<button type = "button" onclick="divide()">Divide Values</button>
 <script>
 function add() {
 
 firstnumber = parseInt(document.getElementById("firstnumber").value);
 secondnumber = parseInt(document.getElementById("secondnumber").value);
-document.getElementById("result").value = firstnumber+secondnumber;
 
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+
+
+else {
+
+document.getElementById("result").value = firstnumber+secondnumber;
+}
 }
 function sub() {
 
 firstnumber = parseInt(document.getElementById("firstnumber").value);
 secondnumber = parseInt(document.getElementById("secondnumber").value);
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+
+
+else {
+
+
 document.getElementById("result").value = firstnumber - secondnumber;
 }
+}
+function multi() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+
+
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+
+else {
+
+document.getElementById("result").value = firstnumber * secondnumber;
+}
+}
+function divide() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+else {
+
+document.getElementById("result").value = firstnumber / secondnumber;
+}
+}
+
 </script>
 </body>
 </html>
