@@ -16,6 +16,7 @@
   
 </form>
 <button type = "button" onclick="add()">Add Values</button>
+<button type = "button" onclick="sub()">Subtract Values</button>
 <script>
 function add() {
 
@@ -23,6 +24,12 @@ firstnumber = parseInt(document.getElementById("firstnumber").value);
 secondnumber = parseInt(document.getElementById("secondnumber").value);
 document.getElementById("result").value = firstnumber+secondnumber;
 
+}
+function sub() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+document.getElementById("result").value = firstnumber - secondnumber;
 }
 </script>
 </body>
