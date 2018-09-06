@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+alert("Hello World!");
+
+var z = 5;
+//alert(z); //makes a pop-up on the html page displaying z
+console.log(z); //prints z in the html consoles
+document.write("Variable Z is:" + z); //prints out the varibale z onto the html page
+
+var input;
+function square(input) {
+   return input* input;
+}
+document.write("<br>") 
+document.write("<br>") 
+document.write("Square number is" + " " + square(4));
+
+
+function add (Num1, Num2, Num3) { 
+      var Num1 = Number(Num1); 
+      var Num2 = Number(Num2); 
+      var Num3 = Number(Num3); 
+      return Number(Num1 + Num2 + Num3); 
+   } 
+   document.write("<br>")
+document.write("<br>")    
+document.write ("Three numbers added together :" + add(4, 6 , 8));
+document.write("<br>") 
+var person  = {
+
+name : "Haroon" ,
+age : 21 ,
+occupation: "Computer Science " 
+} ;
+
+document.write("<br>") 
+
+document.write(person.name  + ", " + person.age + " , " + person.occupation);
+
+var person  = {
+
+name : "Aman" ,
+age : 22 ,
+occupation: "Software" 
+} ;
+
+document.write("<br>")
+document.write("<br>")  
+document.write(person.name  + ", " + person.age + " , " + person.occupation);
+
+
+
+function addup(person) {
+
+person.age+=1;
+document.getElementById("result").innerHTML = person.age;
+}
+
+function createperson(){
+person.name  = document.getElementById("name").value;
+person.age  = document.getElementById("age").value;
+person.occupation = document.getElementById("occupation").value;
+
+
+document.getElementById("Result").innerHTML = person.name + " " + person.age + " " + person.occupation;
+
+}
+
+function add() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+
+
+else {
+
+document.getElementById("result").value = firstnumber+secondnumber;
+}
+}
+function sub() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+
+
+else {
+
+
+document.getElementById("result").value = firstnumber - secondnumber;
+}
+}
+function multi() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+
+
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+
+else {
+
+document.getElementById("result").value = firstnumber * secondnumber;
+}
+}
+function divide() {
+
+firstnumber = parseInt(document.getElementById("firstnumber").value);
+secondnumber = parseInt(document.getElementById("secondnumber").value);
+
+if(document.getElementById("firstnumber").value == "" ){
+alert("Please Enter Value");
+
+document.getElementById("firstnumber").focus();
+
+}
+else if(document.getElementById("secondnumber").value == "") {
+alert("Please Enter Value");
+
+document.getElementById("secondnumber").focus();
+}
+else {
+
+document.getElementById("result").value = firstnumber / secondnumber;
+}
+}
+
+</script>
+First Number:<br>
+  <input type="number" name="firstnumber" id="firstnumber" /><br>
+  Second Number:<br>
+  <input type="number" name="secondnumber" id="secondnumber" /><br>
+  Result: <br>
+  <input type="number" id="result" /><br>
+  <p id= "result"></p>
+  
+  </form>
+<button type = "button" onclick="add()">Add Values</button>
+<button type = "button" onclick="sub()">Subtract Values</button>
+<button type = "button" onclick="multi()">Multiply Values</button>
+<button type = "button" onclick="divide()">Divide Values</button>
+
+<button type = "button" onclick="addup(person)">Age</button>
+ <p id= "result"></p>
+
+ 
+ Name:<br>
+  <input type="string" name="name" id="name" /><br>
+  Age:<br>
+  <input type="number" name="age" id="age" /><br>
+  Occupation: <br>
+  <input type="string" name = "occupation" id="occupation" /><br>
+  
+  
+   <button type = "button" onclick="createperson(person)">Create</button>
+ <p id= "Result"></p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
